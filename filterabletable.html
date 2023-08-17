@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FILTERABLE TABLE</title>
+  <link rel="icon" type="image/x-icon" href="cse.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+#search{background-color:#1ecbe1;}
+</style>
+<body>
+<div class="container-fluid bg-danger">
+<center><h3>CSE-D</h3></center>
+</br></div>
+<div class="container-fluid">
+<br><br>
+   <label>ENTER YOUR ROLL NO:</label>
+  <input class="form-control" id="inputsearch" type="text" placeholder="Roll No..">
+<div class="container-fluid" id="search">
+  <h5>Enter <a class="alert-link">ROLL NO</a> for better.</h5></div><br>
+  <table class="table table-bordered table-striped table-responsive-sm">
+   <thead class="text-primary" bgcolor="black">
+      <tr>
+        <th>ROLL NO</th>
+        <th>NAME</th>
+        <th>CLASSROOM</th>
+		<th>SEAT NO</th>
+      </tr>
+    </thead>
+    <tbody id="outputsearch" class="bg-default">
+	<tr>
+        <td>22CSR222</td>
+        <td>THARANI</td>
+        <td>CSE-D</td>
+		<td>39</td>
+      </tr>
+	<tr>
+        <td>22CSR223</td>
+        <td>THARUN</td>
+        <td>CSE-D</td>
+		<td>40</td>
+      </tr>
+	<tr>
+        <td>22CSR224</td>
+        <td>THESIGA</td>
+        <td>CSE-D</td>
+		<td>41</td>
+      </tr>
+	<tr>
+        <td>22CSR225</td>
+        <td>THIVISHA</td>
+        <td>CSE-D</td>
+		<td>42</td>
+      </tr>
+	<tr>
+        <td>22CSR226</td>
+        <td>THRISHA</td>
+        <td>CSE-D</td>
+		<td>43</td>
+      </tr>
+	<tr>
+        <td>22CSR227</td>
+        <td>TRISHA</td>
+        <td>CSE-D</td>
+		<td>44</td>
+      </tr>
+	<tr>
+        <td>22CSR228</td>
+        <td>VAISHNAVI</td>
+        <td>CSE-D</td>
+		<td>45</td>
+      </tr>
+	<tr>
+        <td>22CSR229</td>
+        <td>VANJULA</td>
+        <td>CSE-D</td>
+		<td>46</td>
+      </tr>
+	<tr>
+        <td>22CSR230</td>
+        <td>VARSHINE</td>
+        <td>CSE-D</td>
+		<td>47</td>
+      </tr>
+	<tr>
+        <td>22CSR231</td>
+        <td>VARSHINI</td>
+        <td>CSE-D</td>
+		<td>48</td>
+      </tr>
+	<tr>
+        <td>22CSR232</td>
+        <td>VARUNIKAA</td>
+        <td>CSE-D</td>
+		<td>49</td>
+      </tr>
+	<tr>
+        <td>22CSR233</td>
+        <td></td>
+        <td>CSE-D</td>
+		<td>50</td>
+      </tr>
+	<tr>
+        <td>22CSR234</td>
+        <td>VIGNESH</td>
+        <td>CSE-D</td>
+		<td>51</td>
+      </tr>
+	<tr>
+        <td>22CSR235</td>
+        <td>VIGNESHWARAN</td>
+        <td>CSE-D</td>
+		<td>52</td>
+      </tr>
+      <tr>
+        <td>22CSR236</td>
+        <td>VIJAYBHARATH</td>
+        <td>CSE-D</td>
+		<td>53</td>
+      </tr>
+	  <tr>
+        <td>22CSR237</td>
+        <td>VIJAYAGOPIKHA</td>
+        <td>CSE-D</td>
+		<td>54</td>
+      </tr>
+      <tr>
+        <td>22CSR238</td>
+        <td>VIJAYAKRISHNA</td>
+        <td>CSE-D</td>
+		<td>55</td>
+      </tr>
+	  <tr>
+        <td>22CSR239</td>
+        <td>VIJITH</td>
+        <td>CSE-D</td>
+		<td>56</td>
+      </tr>
+	  <tr>
+        <td>22CSR240</td>
+        <td>VIKASH</td>
+        <td>CSE-D</td>
+		<td>57</td>
+      </tr>
+	  <tr>
+        <td>22CSR241</td>
+        <td>VISHAL</td>
+        <td>CSE-D</td>
+		<td>58</td>
+      </tr>
+	   <tr>
+        <td>22CSR242</td>
+        <td>VISHAL</td>
+        <td>CSE-D</td>
+		<td>58</td>
+      </tr>
+	  <tr>
+        <td>22CSR243</td>
+        <td>VISHNUPRIYA</td>
+        <td>CSE-D</td>
+		<td>59</td>
+      </tr>
+	  <tr>
+        <td>22CSR244</td>
+        <td>VRUTHIKA</td>
+        <td>CSE-D</td>
+		<td>60</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#inputsearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#outputsearch tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
