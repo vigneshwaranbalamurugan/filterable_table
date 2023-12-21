@@ -20,4 +20,8 @@ This is a filterable table created with HTML, Bootstrap, and JavaScript. Users c
 - **Bootstrap:** CSS framework for responsive and attractive styling.
 - **JavaScript:** Enables dynamic filtering of the table.
 
+## Screenshots
+
+<img src="./Screenshots/Filterable_Table.png" alt="Filterable_Table">
+
 ---
